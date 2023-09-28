@@ -4,7 +4,7 @@
 
 This project aims to explore Walmart Sales data to understand top-performing branches and products, sales trends of different products, and customer behaviour. The aim is to study how sales strategies can be improved and optimized. The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 
-"In this recruiting competition, job-seekers are provided historical sales data for 45 Walmart stores in different regions. Each store contains many departments, and participants must project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact." [source](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
+"In this recruiting competition, job-seekers are provided historical sales data for 45 Walmart stores in different regions. Each store contains many departments, and participants must project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact."
 
 ## Purposes Of The Project
 
@@ -85,10 +85,9 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 6. What product line had the largest revenue?
 5. What is the city with the largest revenue?
 6. What product line had the largest VAT?
-7. Fetch each product line and add a column to those product lines showing "Good", and "Bad". Good if it's greater than average sales
-8. Which branch sold more products than the average product sold?
-9. What is the most common product line by gender?
-12. What is the average rating of each product line?
+7. Which branch sold more products than the average product sold?
+8. What is the most common product line by gender?
+9. What is the average rating of each product line?
 
 ### Sales
 
@@ -110,41 +109,9 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 9. Which day of the week has the best average ratings?
 10. Which day of the week has the best average ratings per branch?
 
-
-## Revenue And Profit Calculations
-
-$ COGS = unitsPrice * quantity $
-
-$ VAT = 5\% * COGS $
-
-$VAT$ is added to the $COGS$ and this is what is billed to the customer.
-
-$ total(gross_sales) = VAT + COGS $
-
-$ grossProfit(grossIncome) = total(gross_sales) - COGS $
-
-**Gross Margin** is gross profit expressed in percentage of the total(gross profit/revenue)
-
-$ \text{Gross Margin} = \frac{\text{gross income}}{\text{total revenue}} $
-
-<u>**Example with the first row in our DB:**</u>
-
-**Data given:**
-
-- $ \text{Unite Price} = 45.79 $
-- $ \text{Quantity} = 7 $
-
-$ COGS = 45.79 * 7 = 320.53 $
-
-$ \text{VAT} = 5\% * COGS\\= 5\%  320.53 = 16.0265 $
-
-$ total = VAT + COGS\\= 16.0265 + 320.53 = $336.5565$
-
-$ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenue}}\\=\frac{16.0265}{336.5565} = 0.047619\\\approx 4.7619\% $
-
 ## Code
 
-For the rest of the code, check the [SQL_queries.sql](https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql) file
+For the rest of the code, check the Walmart Sales SQL Queries.sql file
 
 ```SQL
 -- Create database
